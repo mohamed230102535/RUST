@@ -1,0 +1,56 @@
+Rust is systems programming language
+
+Systems programming language : 
+Low-level system development, 
+such as writing operation systemm, device drivers,
+compliers, game engine , or embedded system 
+
+
+Rust Balance :
+    -Speed
+    -Safty
+    -Concurrency
+    -Portability : complie once and run everywhere
+
+Memory Managment :
+
+# LowLevel language like c++ provide functions for memory allcation
+
+rust uses ownership borrowing
+
+CARGO package manager : is similar to npm for node or pip for python
+
+
+
+
+test.rs file :
+You will need to complie the file everytime you run
+using this commands :
+    rustc test.rs
+then run it
+    ./test
+
+but for projects it will complie auto..
+    cargo new projectName
+
+Rust has two types of format :
+    Debuggable Format
+    Display Format
+
+
+using strings u will need to convert it to string :
+    "Mohamed".to_string()
+
+# rust is fast because it is close to the hardware
+# rust compiled to machine code in no time the same thing as c and c ++
+# but with no garbage collection and automatic memory management 
+
+when u declare a variable (string) is going to be allocated on the heap because it is dynamic allocaton
+
+
+Rust dataType is by default is immutable that means u cannot change it
+so u will need to defined the variable using mut so u can change it 
+    let mut variable: dataType= value;
+
+
+&str (Sting Slice) are immutable has spicific size
