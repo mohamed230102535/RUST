@@ -53,4 +53,87 @@ so u will need to defined the variable using mut so u can change it
     let mut variable: dataType= value;
 
 
-&str (Sting Slice) are immutable has spicific size
+
+---->            Primitive data types:
+
+int , float, bool , char
+
+Integer :
+    Signed Integers (+ and -):i8 ,i16 ,i32 ,i64 ,i128
+    Unsigned Integers (only -):u8 ,u16 ,u32 ,u64 ,u128
+
+    # i32 (32 bits range 2147483647)
+
+    # unsigned integers are little bit lager than the 
+    signed integers due to the power
+Float :
+
+    f32 , f64
+
+Boolean : 
+    bool
+
+Char :
+    char
+
+
+----->            Compound Data types:
+
+Arrays , tuples, slices, and strings (slice string)
+
+// Array
+//cannot mix int and str
+
+    let num: [i32;5] = [1,-2,3,-4,5];
+
+    println!("the numbers are : {:?}",num);
+
+// Tuples
+
+    let mixed_tuples = ("hamda",34,true,[1,2,3,4]);
+
+    println!("{:?}",mixed_tuples);
+
+//Slices : 
+
+is contagious sequnece which make it good thing for memory allocation
+and memory efficiency 
+
+Strings vs string Slices ($str)
+ Strings [growable, mutable, owned string type]
+
+Rust has two primary string types:
+
+# &str (string slices) → Immutable and fixed-length.
+# String → Mutable and dynamically allocated.
+
+Using String::from() ensures that "Hello, world!" is stored in a String type, allowing it to be modified later.
+
+# let mut stone_cold: String = String::from("Hell, ");
+
+String is growable, but the variable itself must be mutable (mut) to allow modification.
+
+
+----->            Function:
+
+# an function / variables should be written in snake case
+
+==> sanke case: hello_world
+==> kebab case: hello-world
+
+rust support hoisting so u can call function anywhere in your code.
+
+hoisting also exist in javascript
+
+//Expressions and Statements
+
+Expression: Anything that returens a value.
+
+
+Statement: Anything that does not return a value.
+
+
+# use const or static for global variables
+
+
+

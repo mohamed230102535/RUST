@@ -1,0 +1,10 @@
+1 - if ur system cannot read rust try this in the terminal
+
+    $env:PATH += ";C:\Users\MoHameD\.cargo\bin"
+
+2 - error "main function not found"
+
+    ensure it has a main function
+    // fn main() {
+    // println!("Hello, Rust!");
+    // }

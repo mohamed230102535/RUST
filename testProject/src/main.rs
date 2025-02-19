@@ -87,12 +87,16 @@
 //Strings vs string Slices ($str)
 //A- Strings [growable, mutable, owned string type]
 
-fn main(){
-    let mut stone_cold: String = String::from("Hell, ");
-    println!("Stone Cold says : {}",stone_cold);
-    stone_cold.push_str("Yeah!!");
-    println!("Stone Cold says : {}",stone_cold);
+// fn main(){
+//     let mut stone_cold: String = String::from("Hell, ");
+//     println!("Stone Cold says : {}",stone_cold);
+//     stone_cold.push_str("Yeah!!");
+//     println!("Stone Cold says : {}",stone_cold);
 
-//B- str (Sting Slice)
-}
+// //B- str (Sting Slice)
+//     let string: String = String::from("Hello, world!");
+//     let slice: &str = &string[0..5]; //&reference
+//     println!("slice value: {}",slice)
+
+// }
 
