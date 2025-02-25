@@ -131,6 +131,14 @@ Expression: Anything that returens a value.
 
 
 Statement: Anything that does not return a value.
+    Almost all statements in Rust end with ---> ;
+    let y = let x = 10; cannot assign statement to another statement 
+    1 Variable declarations : let x = 5;
+    2 Function definitions : fn foo() { }
+    3 Control flow statements: 
+        - if condition {/* code */}
+        else     {/* code */}
+        - while condition {} 
 
 
 # use const or static for global variables
