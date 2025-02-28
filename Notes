@@ -145,3 +145,99 @@ Statement: Anything that does not return a value.
 
 
 
+----->            Ownership:
+
+c, c++ -> Memory Management Control Issue
+Garbage Collector solved this issue, but created a new issue -> Slow Performance :[stopping/ Resuming the program]
+
+Ownership intoduced by Rust to solve memory safety issues and high performance at the same time. 
+
+What is Ownership ?
+Every value has a single owner [every variable has one value, and it is its sole owner].
+
+Borrowing allows you to temporarily borrow reference to values which enables safe concurrent access without sacrificing the memory safety
+
+ Ownership rules :
+ 1 - Each value in Rust has a variable that's its owner.
+ 2 - There can be only one owner at a time.
+ 3 - When the owner goes out of scope, the value will be dropped.
+
+----->            Borrowing and References:
+Safety and Performance
+Borrowing references are powerful concepts
+
+# References: Enable you to borrow values without taking ownership. ---> &
+
+# u can have only one mutable reference or many immutable references
+
+Prevents :
+    1. Null Pointer Dereferencing
+
+       - In C and C++, dereferencing a NULL or uninitialized pointer causes crashes.
+
+       - Rust has no null pointers! Instead, it uses Option<T> to handle cases where a value might be absent.
+
+    2. Dangling Pointers
+
+        - In C/C++, accessing memory after it has been freed leads to undefined behavior.
+
+        - Rust prevents this at compile time by enforcing ownership and borrowing rules.
+
+    3. Buffer Overflows
+
+        - Rust ensures memory safety with bounds checking on arrays and slices.
+
+        - In C, accessing out-of-bounds memory can cause security vulnerabilities.
+
+    4. Data Races (in Multi-threaded Code)
+        - A data race happens when:
+
+            . Two threads access the same memory location.
+            . At least one access is a write.
+            . There is no synchronization.
+
+        - Rust prevents this with ownership and borrowing:
+
+            . Immutable references (&T) allow multiple readers.
+            . Mutable references (&mut T) allow only one writer.
+----------------------------------------------------------------------------
+
+# u can have only one mutable reference or many immutable references
+
+✅ Many immutable references (&) are OK:
+    fn main() {
+        let x = 10;
+        let r1 = &x;
+        let r2 = &x;  // Multiple people reading 📖
+        
+        println!("{} and {}", r1, r2); // Works fine!
+    }
+
+🚨 But you cannot mix mutable and immutable references:
+    fn main() {
+        let mut x = 10;
+        let r1 = &x;
+        let r2 = &mut x;  // ❌ ERROR! Cannot mix mutable and immutable
+
+        println!("{}", r1);
+    }
+# Rust prevents this to avoid problems like data races (reading while writing).
+
+✅ Correct way to use mutable references :
+
+    fn main() {
+        let mut x = 10;
+        
+        {
+            let r = &mut x;  // Only ONE mutable reference allowed
+            *r += 5;         // Changing the value
+        } // r goes out of scope here ✅
+
+        let r2 = &x;  // Now we can read safely
+        println!("{}", r2); // Prints 15
+    }
+----------------------------------------------------------------------------
+
+STRUCT : also in c and c++
+    A data structure that allows you to group multiple fields
+    together under one name.
