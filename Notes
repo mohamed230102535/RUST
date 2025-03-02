@@ -241,3 +241,10 @@ Prevents :
 STRUCT : also in c and c++
     A data structure that allows you to group multiple fields
     together under one name.
+
+
+
+# Note 
+    - immutable variable will be in the stack memory  
+
+    - mutable variable will be in the heap memory
