@@ -60,12 +60,12 @@ int , float, bool , char
 
 Integer :
     Signed Integers (+ and -):i8 ,i16 ,i32 ,i64 ,i128
-    Unsigned Integers (only -):u8 ,u16 ,u32 ,u64 ,u128
+    Unsigned Integers (only +):u8 ,u16 ,u32 ,u64 ,u128
 
-    # i32 (32 bits range 2147483647)
+    # i32 (32 bits range 	-2,147,483,648 ===> 2,147,483,647)
 
     # unsigned integers are little bit lager than the 
-    signed integers due to the power
+    # signed integers due to the power
 Float :
 
     f32 , f64
@@ -150,7 +150,7 @@ Statement: Anything that does not return a value.
 c, c++ -> Memory Management Control Issue
 Garbage Collector solved this issue, but created a new issue -> Slow Performance :[stopping/ Resuming the program]
 
-Ownership intoduced by Rust to solve memory safety issues and high performance at the same time. 
+Ownership introduced by Rust to solve memory safety issues and high performance at the same time. 
 
 What is Ownership ?
 Every value has a single owner [every variable has one value, and it is its sole owner].
