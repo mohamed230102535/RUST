@@ -32,6 +32,10 @@ then run it
 
 but for projects it will complie auto..
     cargo new projectName
+    then cargo run
+
+if u already have a folder 
+    use cargo init
 
 Rust has two types of format :
     Debuggable Format

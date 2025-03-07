@@ -67,6 +67,6 @@ fn avgGradeAndClass(Grades: Vec<u32>){
 
         println!("Class Size: Medium class");
 
-    } else {println!("Class Size: 545675Y8UUU /Large class");}
+    } else {println!("Class Size:Large class");}
     
 }   
