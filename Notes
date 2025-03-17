@@ -104,7 +104,7 @@ is contagious sequnece which make it good thing for memory allocation
 and memory efficiency 
 
 Strings vs string Slices ($str)
- Strings [growable, mutable, owned string type]
+    Strings [growable, mutable, owned string type]
 
 Rust has two primary string types:
 
@@ -250,5 +250,44 @@ STRUCT : also in c and c++
 
 # Note 
     - immutable variable will be in the stack memory  
-
+S
     - mutable variable will be in the heap memory
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----->            Comments :
+
+
+for one line --> //
+
+block comment --> 
+
+/*
+
+*/
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+----->            Enum:
+
+# a versatile tool used t represent a type that can take on one of several possible variants
+
+Enums and structs in Rust both allow you to define custom data types
+
+!      When to use Structs?
+
+When you have multiple pieces of data that always belong together.
+When each field has a distinct meaning.
+
+!      When to use Enums?
+
+When a value can be one of many different types.
+When each variant represents a distinct concept but still belongs under one type.
+
+
+enum IpAddrKind{
+    V4,
+    V6,
+}
+
