@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "arduino-hal"
 version = "0.1.0"
-source = "git+https://github.com/Rahix/avr-hal?rev=fafaf587a32a4500239fd073f89d1b9c36b48092#fafaf587a32a4500239fd073f89d1b9c36b48092"
+source = "git+https://github.com/rahix/avr-hal?rev=fafaf587a32a4500239fd073f89d1b9c36b48092#fafaf587a32a4500239fd073f89d1b9c36b48092"
 dependencies = [
  "atmega-hal",
  "avr-device",
@@ -18,7 +18,7 @@ dependencies = [
 [[package]]
 name = "atmega-hal"
 version = "0.1.0"
-source = "git+https://github.com/Rahix/avr-hal?rev=fafaf587a32a4500239fd073f89d1b9c36b48092#fafaf587a32a4500239fd073f89d1b9c36b48092"
+source = "git+https://github.com/rahix/avr-hal?rev=fafaf587a32a4500239fd073f89d1b9c36b48092#fafaf587a32a4500239fd073f89d1b9c36b48092"
 dependencies = [
  "avr-device",
  "avr-hal-generic",
@@ -50,7 +50,7 @@ dependencies = [
 [[package]]
 name = "avr-hal-generic"
 version = "0.1.0"
-source = "git+https://github.com/Rahix/avr-hal?rev=fafaf587a32a4500239fd073f89d1b9c36b48092#fafaf587a32a4500239fd073f89d1b9c36b48092"
+source = "git+https://github.com/rahix/avr-hal?rev=fafaf587a32a4500239fd073f89d1b9c36b48092#fafaf587a32a4500239fd073f89d1b9c36b48092"
 dependencies = [
  "avr-device",
  "embedded-hal 0.2.7",
@@ -142,11 +142,22 @@ checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.95"
+version = "1.0.94"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "02b3e5e68a3a1a02aad3ec490a98007cbc13c37cbe84a3cd7b8e406d76e7f778"
+checksum = "a31971752e70b8b2686d7e46ec17fb38dad4051d94024c88df49b667caea9c84"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "project2"
+version = "0.1.0"
+dependencies = [
+ "arduino-hal",
+ "embedded-hal 1.0.0",
+ "nb 1.1.0",
+ "panic-halt",
+ "ufmt",
 ]
 
 [[package]]
@@ -207,17 +218,6 @@ name = "unwrap-infallible"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "151ac09978d3c2862c4e39b557f4eceee2cc72150bc4cb4f16abf061b6e381fb"
-
-[[package]]
-name = "vanet"
-version = "0.1.0"
-dependencies = [
- "arduino-hal",
- "embedded-hal 1.0.0",
- "nb 1.1.0",
- "panic-halt",
- "ufmt",
-]
 
 [[package]]
 name = "vcell"

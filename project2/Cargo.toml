@@ -1,24 +1,24 @@
 [package]
-name = "vanet"
+name = "project2"
 version = "0.1.0"
 authors = ["MoHamed1hp <m7md1hp@gmail.com>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [[bin]]
-name = "vanet"
+name = "project2"
 test = false
 bench = false
 
 [dependencies]
-nb = "1.1.0"
-embedded-hal = "1.0.0"
-ufmt = "0.2.0"
 panic-halt = "0.2.0"
+ufmt = "0.2.0"
+nb = "1.1.0"
+embedded-hal = "1.0"
 
 [dependencies.arduino-hal]
-git = "https://github.com/Rahix/avr-hal"
-rev = "fafaf587a32a4500239fd073f89d1b9c36b48092"  # ✅ Reverted to your previous working commit
+git = "https://github.com/rahix/avr-hal"
+rev = "fafaf587a32a4500239fd073f89d1b9c36b48092"
 features = ["arduino-mega2560"]
 
 # Configure the build for minimal size - AVRs have very little program memory
